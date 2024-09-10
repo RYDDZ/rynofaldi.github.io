@@ -1,0 +1,346 @@
+@font-face {
+    font-family: myFont;
+    src: url(genshin.ttf);
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url(zh-cn.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFont2;
+}
+
+body {
+    background-image: url(wallpaperflare.com_wallpaper.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgb(68, 57, 57);
+    background-image: url(Namecard_Banner_Xiao_Mask.png);
+    background-repeat: no-repeat;
+    background-position: 110%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.nama {
+    font-size: 1.5em;
+    color:aliceblue;
+    font-family: myFont;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.em;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    font-family: myFont;
+}
+
+.navigation a.active {
+    color: yellow;
+    font-weight: bold;
+  }  
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 1.5px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color:aliceblue;
+    scroll-snap-type: y mandatory;
+}
+
+.slides{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    scroll-snap-align: start;
+}
+
+.title{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 1.6rem;
+}
+
+.title::before, .title::after{
+    content: "";
+    height: 2px;
+    background-color: rgba(255, 196, 0, 0.689);
+}
+
+.s0content h1{
+    font-size: 3em;
+    color: rgb(240, 248, 255);
+}
+
+.s0content h2{
+    font-size: 1em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.708);
+}
+
+.s1content{
+    height: 400px;
+    width: 800px;
+    background-color: transparent;
+    border-top: 2px solid rgb(191, 191, 191);
+    border-radius: 20px;
+    justify-content: space-around;
+    text-align: left;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 20px black;
+}
+
+.s2container{
+    margin-top: 500px;
+}
+
+.s2content{
+    height: 200px;
+    width: 500px;
+    background-color: transparent;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    display: flex;
+    margin-top: -50px;
+}
+
+.s2content p{
+    font-size: 1.5em;
+    margin: 20px;
+    -webkit-text-stroke: 0.7px rgb(0, 0, 0);
+}
+
+.s3content{
+    height: 400px;
+    width: 500px;
+    background-color: transparent;
+    border-top: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px black;
+}
+
+.youtube.icon {
+    text-decoration: none;
+    size: 20px;
+}
+
+.slide3{
+    flex-direction: column;
+}
+
+.slide3 h1{
+    color: rgb(255, 209, 3);
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+}
+
+.slide2{
+    flex-direction: column;
+}
+
+.slide2 h1{
+    color: rgb(255, 209, 3);
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+}
+
+.slide4{
+    flex-direction: column;
+}
+
+.websiteicon{
+    height: 100px;
+    width: 800px;
+    background-color: transparent;
+    border-top: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 0 20px black;
+    backdrop-filter: blur(20px);
+}
+
+.slide4 h1{
+    color: rgb(255, 209, 3);
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+}
+
+.tulisan{
+    margin-top: -50px;
+}
+
+.NRP{
+    margin-top: 50px;
+    font-size: 1.5em;
+}
+
+.alamat{
+    margin-top: 50px;
+    font-size: 1.5em;
+}
+
+.nohp{
+    margin-top: 50px;
+    font-size: 1.5em;
+}
+
+
+.slide1{
+    flex-direction: column;
+}
+
+.slide1 h1{
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 209, 3);
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+}
+
+.myphoto{
+    height: 200px;
+    width: 200px;
+    margin-top: -100px;
+    margin-right: 100px;
+}
+
+.myphoto img{
+    background-color: aqua;
+    border-radius: 150px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background: radial-gradient(white, rgb(2, 78, 84));
+    border-radius: 10px;
+}
+
+.webicon{
+    color: black;
+}
+
+.webicon:hover{
+    color: rgb(87, 87, 87);
+    transition: 300ms;
+}
+
+.websiteicon{
+    display: flex;
+    justify-content: space-around;
+}
+
+.slide5 h1{
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 209, 3);
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+}
+
+.slide5{
+    flex-direction: column;
+}
+
+.s5content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.vid1{
+    background-color: transparent;
+    border-top: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 0 20px black;
+    height: 200px;
+    width: 300px;
+    margin-right: 20px;
+    backdrop-filter: blur(20px);
+}
+
+.vid2{
+    background-color: transparent;
+    border-top: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 0 20px black;
+    height: 200px;
+    width: 300px;
+    backdrop-filter: blur(20px);
+}
+
+.vid3{
+    background-color: transparent;
+    border-top: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 0 20px black;
+    height: 200px;
+    width: 300px;
+    margin-left: 20px;
+    backdrop-filter: blur(20px);
+}
